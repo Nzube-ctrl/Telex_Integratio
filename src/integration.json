@@ -1,0 +1,14 @@
+{
+  "name": "Telex Server Tick",
+  "type": "interval",
+  "description": "Sends periodic tick events to a Telex channel to indicate server health and uptime.",
+  "version": "1.0.0",
+  "interval": 60000,
+  "settings": {
+    "webhook_url": "https://ping.telex.im/v1/webhooks/01952392-06d8-7996-9037-4270155f88f6",
+    "message": "✅ Tick received from server",
+    "status": "success",
+    "event_name": "server_tick",
+    "username": "Nzube Uwakwe"
+  }
+}
