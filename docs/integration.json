@@ -1,14 +1,76 @@
 {
-  "name": "Telex Server Tick",
-  "type": "interval",
-  "description": "Sends periodic tick events to a Telex channel to indicate server health and uptime.",
-  "version": "1.0.0",
-  "interval": 60000,
-  "settings": {
-    "webhook_url": "https://ping.telex.im/v1/webhooks/01952392-06d8-7996-9037-4270155f88f6",
-    "message": "✅ Tick received from server",
-    "status": "success",
-    "event_name": "server_tick",
-    "username": "Nzube Uwakwe"
+  "data": {
+    "date": {
+      "created_at": "2025-02-19",
+      "updated_at": "2025-02-19"
+    },
+    "descriptions": {
+      "app_name": "Telex Server Tick",
+      "app_description": "Sends periodic tick events to a Telex channel to indicate server health and uptime.",
+      "app_url": "https://github.com/Nzube-ctrl/Telex_Integratio",
+      "app_logo": "",
+      "background_color": "#3498db"
+    },
+    "integration_category": "Monitoring & Logging",
+    "integration_type": "interval",
+    "is_active": true,
+    "output": [
+      {
+        "label": "server_status",
+        "value": "online"
+      }
+    ],
+    "key_features": [
+      "Periodic server health checks",
+      "Automatic Telex channel updates",
+      "Customizable tick intervals",
+      "Webhook-based integration"
+    ],
+    "permissions": {
+      "monitoring_user": {
+        "always_online": true,
+        "display_name": "Server Monitor"
+      }
+    },
+    "settings": [
+      {
+        "label": "interval",
+        "type": "number",
+        "required": true,
+        "default": 60000
+      },
+      {
+        "label": "Webhook URL",
+        "type": "text",
+        "required": true,
+        "default": "https://ping.telex.im/v1/webhooks/01952392-06d8-7996-9037-4270155f88f6"
+      },
+      {
+        "label": "Tick Message",
+        "type": "text",
+        "required": true,
+        "default": "✅ Tick received from server"
+      },
+      {
+        "label": "Status",
+        "type": "text",
+        "required": true,
+        "default": "success"
+      },
+      {
+        "label": "Event Name",
+        "type": "text",
+        "required": true,
+        "default": "server_tick"
+      },
+      {
+        "label": "Alert Admin",
+        "type": "multi-checkbox",
+        "required": true,
+        "default": ["Super-Admin"],
+        "options": ["Super-Admin", "Admin", "Manager", "Developer"]
+      }
+    ],
+    "tick_url": "https://ping.telex.im/v1/webhooks/01952392-06d8-7996-9037-4270155f88f6"
   }
 }
