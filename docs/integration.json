@@ -8,7 +8,7 @@
       "app_name": "Telex Server Tick",
       "app_description": "Sends periodic tick events to a Telex channel to indicate server health and uptime.",
       "app_url": "https://github.com/Nzube-ctrl/Telex_Integratio",
-      "app_logo": "",
+      "app_logo": "https://raw.githubusercontent.com/Nzube-ctrl/Telex_Integratio/main/docs/logo.png",
       "background_color": "#3498db"
     },
     "integration_category": "Monitoring & Logging",
