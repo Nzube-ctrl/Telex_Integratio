@@ -15,6 +15,7 @@
     "integration_type": "interval",
     "is_active": true,
     "tick_url": "https://ping.telex.im/v1/webhooks/01952392-06d8-7996-9037-4270155f88f6",
+    "target_url": " https://www.postb.in/1740125682852-0043008318170",
     "key_features": [
       "Periodic tick events to monitor server health",
       "Configurable interval settings",
