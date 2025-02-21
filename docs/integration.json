@@ -6,25 +6,19 @@
     },
     "descriptions": {
       "app_name": "Telex Server Tick",
-      "app_description": "Sends periodic tick events to a Telex channel to indicate server health and uptime.",
-      "app_url": "https://github.com/Nzube-ctrl/Telex_Integratio",
+      "app_description": "Monitors server uptime and sends periodic tick events.",
+      "app_url": "https://nzube-ctrl.github.io/Telex_Integratio/",
       "app_logo": "https://raw.githubusercontent.com/Nzube-ctrl/Telex_Integratio/main/docs/logo.png",
-      "background_color": "#3498db"
+      "background_color": "#0000FF"
     },
     "integration_category": "Monitoring & Logging",
     "integration_type": "interval",
     "is_active": true,
-    "output": [
-      {
-        "label": "server_status",
-        "value": "online"
-      }
-    ],
+    "tick_url": "https://ping.telex.im/v1/webhooks/01952392-06d8-7996-9037-4270155f88f6",
     "key_features": [
-      "Periodic server health checks",
-      "Automatic Telex channel updates",
-      "Customizable tick intervals",
-      "Webhook-based integration"
+      "Periodic tick events to monitor server health",
+      "Configurable interval settings",
+      "Webhook support for real-time alerts"
     ],
     "permissions": {
       "monitoring_user": {
@@ -34,28 +28,16 @@
     },
     "settings": [
       {
-        "label": "interval",
+        "label": "Interval (ms)",
         "type": "number",
         "required": true,
         "default": 60000
       },
       {
-        "label": "Webhook URL",
-        "type": "text",
-        "required": true,
-        "default": "https://ping.telex.im/v1/webhooks/01952392-06d8-7996-9037-4270155f88f6"
-      },
-      {
-        "label": "Tick Message",
+        "label": "Message",
         "type": "text",
         "required": true,
         "default": "✅ Tick received from server"
-      },
-      {
-        "label": "Status",
-        "type": "text",
-        "required": true,
-        "default": "success"
       },
       {
         "label": "Event Name",
@@ -64,13 +46,17 @@
         "default": "server_tick"
       },
       {
-        "label": "Alert Admin",
-        "type": "multi-checkbox",
+        "label": "Status",
+        "type": "text",
         "required": true,
-        "default": ["Super-Admin"],
-        "options": ["Super-Admin", "Admin", "Manager", "Developer"]
+        "default": "success"
+      },
+      {
+        "label": "Username",
+        "type": "text",
+        "required": false,
+        "default": "Nzube Uwakwe"
       }
-    ],
-    "tick_url": "https://ping.telex.im/v1/webhooks/01952392-06d8-7996-9037-4270155f88f6"
+    ]
   }
 }
